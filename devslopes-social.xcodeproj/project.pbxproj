@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A8CC3C31E68B144005076C9 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8CC3C21E68B144005076C9 /* Post.swift */; };
 		3A96B4611E6608A700636173 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A96B4601E6608A700636173 /* DataService.swift */; };
 		3A9CE57D1E5F5E7D005B15BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CE57C1E5F5E7D005B15BF /* AppDelegate.swift */; };
 		3A9CE57F1E5F5E7D005B15BF /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CE57E1E5F5E7D005B15BF /* SignInVC.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		1890E76C25F25BE637503D52 /* Pods-devslopes-social.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-devslopes-social.debug.xcconfig"; path = "Pods/Target Support Files/Pods-devslopes-social/Pods-devslopes-social.debug.xcconfig"; sourceTree = "<group>"; };
+		3A8CC3C21E68B144005076C9 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		3A96B4601E6608A700636173 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		3A9CE5791E5F5E7D005B15BF /* devslopes-social.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "devslopes-social.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A9CE57C1E5F5E7D005B15BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		3A9CE5901E5F60D6005B15BF /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				3A8CC3C21E68B144005076C9 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -293,6 +296,7 @@
 				3AAE66051E61E81600CB3E74 /* FancyField.swift in Sources */,
 				3AAE660C1E6335AB00CB3E74 /* CircleImageView.swift in Sources */,
 				3A9CE57F1E5F5E7D005B15BF /* SignInVC.swift in Sources */,
+				3A8CC3C31E68B144005076C9 /* Post.swift in Sources */,
 				3AAE66031E61E69800CB3E74 /* RoundBtn.swift in Sources */,
 				3AAE66071E61E94300CB3E74 /* FancyButton.swift in Sources */,
 				3A96B4611E6608A700636173 /* DataService.swift in Sources */,
