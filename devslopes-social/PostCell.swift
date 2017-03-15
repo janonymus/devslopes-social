@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 class PostCell: UITableViewCell {
 
@@ -32,12 +33,37 @@ class PostCell: UITableViewCell {
         caption.scrollRangeToVisible(NSMakeRange(0, 0))
     }
     
-    func configureCell(post: Post) {
+    func configureCell(post: Post, img: UIImage? = nil) {
         
         self.post=post
         
         self.caption.text = post.caption
         self.likesLabel.text = "\(post.likes)"
+        
+        if img != nil {
+            self.postImg.image = img
+        } else {
+            
+            let ref = FIRStorage.storage().reference(forURL: self.post.imageURl)
+            ref.data(withMaxSize: 2 * 1024 * 1024, completion : { (data,error) in
+                
+                if error != nil {
+                    
+                    print("JANO: Unable to download image from Firebase storage")
+                } else {
+                    
+                    print("JANO: Image downloaded from Firebase storage")
+                    if let imgData = data {
+                        if let img = UIImage(data: imgData){
+                            self.postImg.image = img
+                            FeedVC.imageCache.setObject(img, forKey: self.post.imageURl as NSString)
+                        }
+                    }
+                }
+            })
+            
+            
+        }
         
     }
 
