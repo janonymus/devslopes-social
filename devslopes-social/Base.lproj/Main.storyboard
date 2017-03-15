@@ -185,13 +185,17 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oWJ-kz-5jX">
                                         <rect key="frame" x="8" y="8" width="288" height="49"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-ar-hEe" customClass="CircleImageView" customModule="devslopes_social" customModuleProvider="target">
+                                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="add-image" translatesAutoresizingMaskIntoConstraints="NO" id="5Et-ar-hEe" customClass="CircleImageView" customModule="devslopes_social" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
                                                 <color key="backgroundColor" red="0.0" green="0.51372549020000002" blue="0.56078431370000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                <gestureRecognizers/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="49" id="QjR-GK-fLK"/>
                                                     <constraint firstAttribute="height" constant="49" id="vme-JH-cYR"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="pCt-HF-rFR" appends="YES" id="8t1-Sw-Vso"/>
+                                                </connections>
                                             </imageView>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Add a caption" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="veA-at-Q8e" customClass="FancyField" customModule="devslopes_social" customModuleProvider="target">
                                                 <rect key="frame" x="59" y="0.0" width="170" height="49"/>
@@ -284,16 +288,16 @@
                                                             </subviews>
                                                         </stackView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="OeO-Mj-W11" userLabel="LikeStackView">
-                                                            <rect key="frame" x="201" y="291.5" width="95" height="23.5"/>
+                                                            <rect key="frame" x="200" y="291" width="96" height="24"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Likes:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tos-3a-iig">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="23.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="43" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88888" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVh-O3-f2n">
-                                                                    <rect key="frame" x="47.5" y="0.0" width="47.5" height="23.5"/>
+                                                                    <rect key="frame" x="48" y="0.0" width="48" height="24"/>
                                                                     <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="17"/>
                                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.87" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -346,6 +350,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="imageAdd" destination="5Et-ar-hEe" id="nHp-j9-xR0"/>
                         <outlet property="tableView" destination="2Lh-nF-xYD" id="0LC-AC-vQ3"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="goToSignIn" id="SAJ-Ha-nVX"/>
                     </connections>
@@ -354,6 +359,11 @@
                 <tapGestureRecognizer id="B4e-ss-JTq">
                     <connections>
                         <action selector="signOutTapped:" destination="UBp-dU-KVM" id="p4J-V0-fsX"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="pCt-HF-rFR">
+                    <connections>
+                        <action selector="addImageTapped:" destination="UBp-dU-KVM" id="HSx-qQ-e9C"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
